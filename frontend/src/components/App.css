@@ -1,0 +1,378 @@
+/* .app {
+
+  border: solid 1px black;
+ 
+
+} */
+
+.name-container {
+   display: flex;
+   width: 100%;
+   height: 200px;
+   text-align: center;
+
+}
+
+
+.name-input1 {
+
+   border: none;
+   margin-top: 50px;
+   margin-left: 150px;
+   font-size: 2rem;
+   max-width: 400px;
+
+}
+
+.name-input2 {
+
+   border: none;
+   margin-top: 50px;
+   margin-left: 200px;
+   font-size: 1.5rem;
+   max-width: 400px;
+  
+
+
+}
+
+.contact-container 
+{
+  
+  margin-top: 20px;
+  gap: 15px;
+}
+
+
+.contact-container input {
+
+   border: none;
+   margin-left: 8px;
+   font-size: 1rem;
+   width: 250px; 
+   margin-top: 30px;
+
+
+}
+
+.image-box {
+
+   margin-left: 120px;
+
+
+}
+
+.image-box img {
+
+ border-radius: 125px;  
+ width: 190px;
+ height: 190px; 
+ border: .2px solid;
+
+
+}
+
+.phone {
+
+   margin-left: 80px;
+}   
+
+.map {
+
+   margin-left: 80px;
+}
+
+.email {
+
+   margin-left: 80px;
+}
+
+
+.color-box {
+   display: flex;
+   margin-top: 25px;
+   margin-bottom: 5px;
+   margin-left: 50px;
+   gap:3px;
+ }
+
+ .color-bar{
+
+   display: flex;
+   background-color: blueviolet;
+   width:100%;
+   height: 100px;
+
+
+ }
+
+ .heading {
+
+   margin-left: 350px;
+
+ }
+
+ .color-option {
+   width: 30px;
+   height: 30px;
+   margin: 0 5px;
+   cursor: pointer;
+ }
+ 
+ .main-box {
+
+  display: flex;
+
+ }
+
+ .main-box-1 {
+
+   height: 1500px;
+   width: 500px;
+   text-align: center;
+   border-right: 1px solid rgba(204, 200, 200, 0.935);
+  
+ }
+
+ .main-box-2 {
+
+   
+   height: 1500px;
+   width: 1050px;
+ }
+
+ .skills-box {
+
+   margin-top: 15px;
+   height: 500px;
+   border-bottom: 1px solid rgba(204, 200, 200, 0.935);
+
+}
+
+.skills-box input {
+
+   border: none;
+   font-size: 1.2rem;
+   width: 320px;
+}
+
+.skills-box button {
+
+   color:black;
+   background-color: white;
+   font-size: 1.2rem;
+   margin-left: 10px;
+   border: none;
+}
+
+.skills-box ul {
+
+font-size: 1.2rem;
+text-align: left;
+
+}
+
+.home h1 {
+
+   text-align: center;
+   margin-top: 150px;
+   font-family: Nunito,sans-serif;
+   font-weight:500 !important;
+   font-size:2.5rem;
+  
+
+}
+
+.home p {
+
+    font-size: 1.2rem;
+    margin-top: 40px;
+
+}
+
+.home-box {
+
+   display: flex;
+   gap: 150px;
+   margin-top:100px;
+   margin-left: 35px;
+   margin-right: 35px;
+
+}
+
+.navbar-box {
+
+    display: flex;
+    gap:5px;
+    width:100%;
+    height: 100px;
+    background-color:blueviolet
+
+}
+
+.logo-img img{
+
+    margin-top: 35px;
+    height: 45px;
+    width:60px;
+    margin-left: 50px;
+    border:none;
+
+}
+
+.navbar-p p {
+
+   margin-top: 30px;
+   font-size: 2.4rem;
+   color: white;
+
+}
+
+.nav-btn-box button {
+
+    margin-top: 40px;  
+    background-color:rgba(0, 251, 255, 0.898);
+    width: 120px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    margin-left: 800px;
+
+}
+
+.home-link {
+
+   text-align: center;
+   margin-left: 400px;
+   margin-right: 400px;
+   margin-top: 50px;
+   margin-top: 200px;
+}
+
+.home-link p {
+
+   font-size: 1.2rem;
+
+}
+
+.link-btn-box button {
+
+    margin-top: 30px;  
+    margin-left: 550px;
+    background-color:rgb(6, 251, 255);
+    width: 300px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 100px;
+
+}
+
+.cards-container {
+
+    display: flex;
+    gap:80px;
+    margin-left: 100px;
+    margin-top: 100px;
+
+}
+
+.card {
+
+     width: 23rem;
+     height: 25rem;
+     border: none;
+
+}
+
+.card-text {
+
+    margin-top: 50px;
+
+}
+
+
+.language-box {
+
+   margin-top: 15px;
+   height: 300px;
+   border-bottom: 1px solid rgba(204, 200, 200, 0.935);
+
+}
+
+.language-box input {
+
+   border: none;
+   font-size: 1.2rem;
+   width: 320px;
+}
+
+.language-box button {
+
+   color:black;
+   background-color: white;
+   font-size: 1.2rem;
+   margin-left: 10px;
+   border: none;
+}
+
+.language-box ul {
+
+font-size: 1.2rem;
+text-align: left;
+
+}
+
+
+.profile-box {
+
+margin-top: 20px;
+margin-left: 50px;
+
+}
+
+.profile-input {
+
+width:850px;
+height:250px;
+
+}
+
+.experience-box {
+
+margin-top: 20px;
+margin-left: 50px;
+
+}
+
+.experience-field button {
+
+margin-left: 30px;
+background-color: rgb(29, 29, 208);
+color:white
+
+}
+
+.experience-field {
+
+margin-top: 20px;
+
+}
+
+.experience-input1 {
+
+width:380px;  
+border: none; 
+font-size: 1.2rem;
+   
+}
+
+
+.experience-input2 {
+
+margin-left: 30px;  
+width:380px; 
+border: none;  
+font-size: 1.2rem;
+
+}
