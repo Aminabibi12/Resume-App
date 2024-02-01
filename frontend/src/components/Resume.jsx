@@ -20,8 +20,11 @@ function Resume() {
           <ColourBar colors={colorOptions} onSelectColor={handleColorChange} />
         </div>
 
+     <div style={{}}>
       <Name selectedColor={selectedColor} />
       <Main />
+      </div>
+
     </div>
   );
 }

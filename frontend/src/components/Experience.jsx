@@ -1,62 +1,68 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function Experience() {
-  const [jobDetails, setJobDetails] = useState([{ company: "", position: "" }]);
+const Experience = () => {
+  const [experiences, setExperiences] = useState([]);
+  const [company, setCompany] = useState('');
+  const [position, setPosition] = useState('');
 
-  const handleInputChange = (index, field, value) => {
-    const updatedJobDetails = [...jobDetails];
-    updatedJobDetails[index] = {
-      ...updatedJobDetails[index],
-      [field]: value,
-    };
-    setJobDetails(updatedJobDetails);
+  const handleAddExperience = () => {
+    if (company && position) {
+      setExperiences([...experiences, { company, position }]);
+      setCompany('');
+      setPosition('');
+    }
   };
 
-  const handleAddField = () => {
-    const lastJob = jobDetails[jobDetails.length - 1];
-    const defaultValues = { company: "", position: "" };
-    setJobDetails([...jobDetails, { company: lastJob.company || defaultValues.company, position: lastJob.position || defaultValues.position }]);
-  };
-
-  const handleRemoveField = (index) => {
-    const updatedJobDetails = [...jobDetails];
-    updatedJobDetails.splice(index, 1);
-    setJobDetails(updatedJobDetails);
+  const handleDeleteExperience = (index) => {
+    const updatedExperiences = [...experiences];
+    updatedExperiences.splice(index, 1);
+    setExperiences(updatedExperiences);
   };
 
   return (
-    <div className="experience-box">
-      <h2>Experience</h2>
-
-      {jobDetails.map((job, index) => (
-        <div key={index} className="experience-field">
-          <input
-            className="experience-input1"
-            type="text"
-            placeholder="Company"
-            value={job.company}
-            onChange={(e) => handleInputChange(index, "company", e.target.value)}
-          />
-          <input
-            className="experience-input2"
-            type="text"
-            placeholder="Position"
-            value={job.position}
-            onChange={(e) => handleInputChange(index, "position", e.target.value)}
-          />
-          {index === 0 ? (
-            <button type="button" onClick={handleAddField}>
-              Add
-            </button>
-          ) : (
-            <button type="button" onClick={() => handleRemoveField(index)}>
-              Remove
-            </button>
-          )}
-        </div>
-      ))}
+    <div style={{
+      marginLeft:"50px",
+      marginTop:"50px"
+  }}> <h1>Experience</h1>
+      <div style={{
+      marginTop:"50px"
+  }} >
+        <input
+        style={{
+            marginLeft:"50px",
+            width:"250px"
+        }}
+          type="text"
+          placeholder="Company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+        />
+        <input
+        style={{
+          marginLeft:"50px",
+          width:"250px"
+        }}
+          type="text"
+          placeholder="Position"
+          value={position}
+          onChange={(e) => setPosition(e.target.value)}
+        />
+        <button onClick={handleAddExperience} style={{marginLeft:"50px",backgroundColor:"#aa4d84", color:"white", width:"80px", borderRadius:"10px"}}>Add</button>
+      </div>
+      <div>
+      {experiences.map((experience, index) => (
+          <div key={index}>
+            <p style={{marginLeft:"20px", marginTop:"20px"}}>
+              <span style={{ fontWeight: "bold", marginLeft:"30px" }}>Company:</span> {experience.company},
+              <span style={{ fontWeight: "bold", marginLeft:"30px"  }}> Position:</span> {experience.position}
+              <button onClick={() => handleDeleteExperience(index)} style={{marginLeft:"50px",backgroundColor:"#aa4d84", color:"white", width:"80px", borderRadius:"10px"}}>Delete</button>
+            </p>
+           
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default Experience;

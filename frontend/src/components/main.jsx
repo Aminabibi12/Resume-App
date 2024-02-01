@@ -3,6 +3,7 @@ import Skills from "./Skills";
 import Language from "./Language";
 import Profile from "./Profile";
 import Experience from "./Experience";
+import Education from "./Education";
 
 function Main () {
 
@@ -21,6 +22,7 @@ function Main () {
   
           <Profile />
           <Experience />
+          <Education />
 
         </div>
 
