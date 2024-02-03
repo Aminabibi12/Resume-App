@@ -23,14 +23,15 @@ const Education = () => {
     <div style={{
       marginLeft: "5px",
       marginTop: "10px",
-      display: "flex", // Set display to flex
-      flexDirection: "column", // Align children vertically
-      alignItems: "flex-start" // Align children to the start of the container
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start"
     }}>
-      <h1 style={{fontSize:"1.8rem"}}>Education</h1>
+      <h1 style={{fontSize:"1.4rem"}}>Education</h1>
+
       <div style={{
         marginTop: "50px",
-        display: "flex", // Set display to flex
+        display: "flex",
       }}>
         <input
           style={{
@@ -54,12 +55,14 @@ const Education = () => {
         />
         <button onClick={handleAddEducation} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Add</button>
       </div>
+
       <div>
         {educations.map((education, index) => (
           <div key={index}>
             <p style={{ marginLeft: "5px", marginTop: "10px" }}>
               <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Degree Level:</span> {education.level},
-              <span style={{ fontWeight: "bold", marginLeft: "5px" }}> Field of Study:</span> {education.field}
+              <br />
+              <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Field of Study:</span> {education.field}
               <button onClick={() => handleDeleteEducation(index)} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Delete</button>
             </p>
           </div>

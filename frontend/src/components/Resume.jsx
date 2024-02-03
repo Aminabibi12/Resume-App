@@ -6,8 +6,8 @@ import ColourBar from './ColourBar';
 import html2pdf from 'html2pdf.js';
 
 function Resume() {
-  const colorOptions = ["#FFE9EE", "#D8E2DC", "#FFE5D9", "#DBCDF0", "#C6DEF1"];
-  const [selectedColor, setSelectedColor] = useState("#FFE9EE");
+  const colorOptions = ["#DBCDF0", "#D8E2DC", "#FFE5D9", "#FFE9EE", "#C6DEF1"];
+  const [selectedColor, setSelectedColor] = useState("#DBCDF0");
 
   const handleColorChange = (color) => {
     setSelectedColor(color);

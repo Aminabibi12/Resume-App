@@ -22,7 +22,7 @@
    border: none;
    margin-top: 20px;
    margin-left: 80px;
-   font-size: 1.2rem;
+   font-size: 1rem;
    max-width: 160px;
 
 }
@@ -32,7 +32,7 @@
    border: none;
    margin-top: 20px;
    margin-left: 80px;
-   font-size: 1.2rem;
+   font-size: 1rem;
    max-width: 160px;
   
 }
@@ -318,7 +318,7 @@ text-align: left;
 
 .language-box ul {
 
-font-size: 1.2rem;
+font-size: 1rem;
 text-align: left;
 
 }
@@ -364,7 +364,7 @@ width:50px;
 
 width:200px;  
 border: none; 
-font-size: 1.2rem;
+font-size: 1rem;
    
 }
 
@@ -374,6 +374,6 @@ font-size: 1.2rem;
 margin-left: 30px;  
 width:380px; 
 border: none;  
-font-size: 1.2rem;
+font-size: 1rem;
 
 }
