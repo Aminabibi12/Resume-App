@@ -15,6 +15,7 @@ function Contact({ selectedColor }) {
        
         <input style={{ backgroundColor: selectedColor }}
           type="tel"
+          name="phone"
           placeholder="Phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
@@ -26,6 +27,7 @@ function Contact({ selectedColor }) {
        
         <input  style={{ backgroundColor: selectedColor }}
           type="text"
+          name="location"
           placeholder="Location"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -37,6 +39,7 @@ function Contact({ selectedColor }) {
        
         <input  style={{ backgroundColor: selectedColor }}
           type="email"
+          name="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

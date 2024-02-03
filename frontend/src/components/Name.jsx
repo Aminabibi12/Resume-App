@@ -29,7 +29,7 @@ function Name({ selectedColor }) {
 
       <div className="name-box">
         <form onSubmit={handleSubmit}>
-          <input
+          <input 
             style={{ backgroundColor: selectedColor }}
             className="name-input1"
             placeholder="Full Name"
