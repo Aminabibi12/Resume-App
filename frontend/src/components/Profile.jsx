@@ -12,7 +12,7 @@ function Profile() {
   return (
     <div className="profile-box">
       <div className="profile">
-        <h2>Profile</h2>
+        <h2 style={{fontSize:"1.8rem"}}>Profile</h2>
        
         <form className="profile-form">
           
