@@ -29,6 +29,11 @@ function Resume() {
   const generatePdf = () => {
     const content = document.getElementById('resume-content');
     content.style.border = '5px solid black';
+    content.style.borderRadius='10px';
+    content.style.marginTop='35px';
+    content.style.marginLeft='10px';
+    content.style.marginRight='10px';
+
 
     // Create a copy of the content
     const contentCopy = content.cloneNode(true);
@@ -50,7 +55,7 @@ function Resume() {
     });
 
     html2pdf(contentCopy, {
-      margin: 5,
+    
       filename: 'resume.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
