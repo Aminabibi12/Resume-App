@@ -55,9 +55,12 @@ function Resume() {
     });
     const textareasInCopy = contentCopy.querySelectorAll('textarea');
 textareasInCopy.forEach((textarea) => {
-  textarea.style.display = 'block';
-  textarea.style.width = '100%'; // Adjust the width as needed
-  textarea.style.whiteSpace = 'pre-wrap'; // Preserve line breaks
+  textarea.style.display = 'none';
+  const div = document.createElement('div');
+  div.innerText = textarea.value;
+  div.style.whiteSpace = 'pre-wrap';
+  div.style.marginTop = '10px'; // Adjust as needed
+  contentCopy.appendChild(div);
 });
 
     html2pdf(contentCopy, {
