@@ -57,7 +57,6 @@ function Resume() {
 textareasInCopy.forEach((textarea) => {
   textarea.style.display = 'block';
   textarea.style.width = '100%'; // Adjust the width as needed
-  textarea.style.overflowY = 'auto'; // Enable vertical scrolling
   textarea.style.whiteSpace = 'pre-wrap'; // Preserve line breaks
 });
 
