@@ -53,6 +53,10 @@ function Resume() {
         input.style.display = 'none';
       }
     });
+    const textareasInCopy = contentCopy.querySelectorAll('textarea');
+    textareasInCopy.forEach((textarea) => {
+    textarea.style.display = 'block';
+  });
 
     html2pdf(contentCopy, {
     
