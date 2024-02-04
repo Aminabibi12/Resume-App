@@ -18,7 +18,7 @@ function Profile() {
           
             <textarea className="profile-input"
               rows="9"
-              type="text"
+              type="textarea"
               name="username"
               placeholder="I am an experienced and detail-oriented software engineer...."
               value={username}
