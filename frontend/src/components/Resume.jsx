@@ -56,6 +56,7 @@ function Resume() {
     const textareasInCopy = contentCopy.querySelectorAll('textarea');
     textareasInCopy.forEach((textarea) => {
     textarea.style.display = 'block';
+    textarea.style.width = '100%'; // Adjust the width as needed
   });
 
     html2pdf(contentCopy, {
