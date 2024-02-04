@@ -21,17 +21,20 @@ const Experience = () => {
 
   return (
     <div style={{
-      marginLeft: "5px",
+      marginLeft:"2px",
       marginTop: "10px",
       display: "flex",
       flexDirection: "column",
-      alignItems: "flex-start"
+      alignItems: "flex-start",
+      marginBottom:"20px",
+     
     }}>
-      <h1 style={{ fontSize: "1.4rem" }}>Experience</h1>
+      <h1 style={{ fontSize: "1.4rem" }}>Experience:</h1>
 
       <div id="experience-content" style={{
         marginTop: "10px",
         display: "flex",
+       
       }}>
         <input
           style={{
@@ -56,13 +59,13 @@ const Experience = () => {
         <button onClick={handleAddExperience} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Add</button>
       </div>
 
-      <div>
+      <div style={{ borderBottom:"2px solid black",width: "535px", marginTop:"10px"}} >
         {experiences.map((experience, index) => (
-          <div key={index}>
-            <p style={{ marginLeft: "5px", marginTop: "10px" }}>
-              <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Company:</span> {experience.company},
+          <div style={{ borderBottom:".5px solid black", width:"100%" }}key={index}>
+            <p style={{ marginLeft: "5px", marginTop: "10px", width: "500px"}}>
+              <span  style={{ fontWeight: "bold", marginLeft: "5px",marginTop: "10px", width: "500px" }}>Company:</span> {experience.company},
               <br />
-              <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Position:</span> {experience.position}
+              <span  style={{ fontWeight: "bold", marginLeft: "5px",marginTop: "10px", width: "500px" }}>Position:</span> {experience.position}
               <button onClick={() => handleDeleteExperience(index)} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Delete</button>
             </p>
           </div>

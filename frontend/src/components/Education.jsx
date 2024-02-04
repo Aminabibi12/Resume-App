@@ -21,16 +21,17 @@ const Education = () => {
 
   return (
     <div style={{
-      marginLeft: "5px",
+      marginLeft:"2px",
       marginTop: "10px",
       display: "flex",
       flexDirection: "column",
-      alignItems: "flex-start"
+      alignItems: "flex-start",
+     
     }}>
-      <h1 style={{fontSize:"1.4rem"}}>Education</h1>
+      <h1 style={{fontSize:"1.4rem"}}>Education:</h1>
 
       <div style={{
-        marginTop: "50px",
+        marginTop: "20px",
         display: "flex",
       }}>
         <input
@@ -56,13 +57,13 @@ const Education = () => {
         <button onClick={handleAddEducation} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Add</button>
       </div>
 
-      <div>
+      <div  style={{ borderBottom:"2px solid black",width: "535px", marginTop:"10px"}} >
         {educations.map((education, index) => (
           <div key={index}>
-            <p style={{ marginLeft: "5px", marginTop: "10px" }}>
-              <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Degree Level:</span> {education.level},
+            <p style={{ marginLeft: "5px", marginTop: "10px", width: "500px"}}>
+              <span style={{ fontWeight: "bold", marginLeft: "5px",marginTop: "10px", width: "500px" }}>Degree Level:</span> {education.level},
               <br />
-              <span style={{ fontWeight: "bold", marginLeft: "5px" }}>Field of Study:</span> {education.field}
+              <span style={{ fontWeight: "bold", marginLeft: "5px",marginTop: "10px",width: "500px" }}>Field of Study:</span> {education.field}
               <button onClick={() => handleDeleteEducation(index)} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Delete</button>
             </p>
           </div>

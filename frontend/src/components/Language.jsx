@@ -25,6 +25,7 @@ function Language() {
 
   return (
     <div className="language-box">
+      <h2 style={{fontSize:"1.2rem", textAlign:"left"}}>Laguages:</h2>
       <form onSubmit={(e) => e.preventDefault()}>
         <div>
           <input

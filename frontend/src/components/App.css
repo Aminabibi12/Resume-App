@@ -1,12 +1,38 @@
-.resume {
-   /* size: A4; */
+.resume-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .resume-wrapper {
+   width: 100%;
+ }
+ 
+ .resume {
    margin: auto;
-   padding: 0px;
-   width: 210mm; 
-   height: 297mm;
+  
+   box-sizing: border-box;
+   width: 210mm;
+   max-width: 100%; /* Allow the container to be responsive */
    border: 1px solid rgb(46, 24, 24);
-   
-}
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px; /* Add margin at the bottom to separate the button */
+ }
+ 
+ #resume-content {
+   padding: 20px;
+   box-sizing: border-box;
+  
+ }
+ 
+ .download-button {
+   margin-top: 20px; /* Ensure some space between the content and the button */
+   width: 200px;
+   font-size: 1.5rem;
+   border-radius: 15px;
+   background-color: rgb(23, 29, 29);
+   display: block;
+ }
  
  
 .name-container {
@@ -131,7 +157,7 @@
    width: 30%;
    height: auto;
    text-align: center;
-   border-right: 1px solid rgba(204, 200, 200, 0.935);
+   border-right: 2px solid black;
   
  }
 
@@ -146,7 +172,7 @@
 
    margin-top: 15px;
    height: 490px;
-   border-bottom: 1px solid rgba(204, 200, 200, 0.935);
+  
 
 }
 
@@ -328,22 +354,21 @@ text-align: left;
 
 margin-top: 20px;
 border: none;
-margin-left: 5px;
-
-
+margin-left: 2px;
 
 }
 
 .profile-input {
 
-width:235%;
-height:300px;
+width:535px;
+height:auto;
 border: none;
-border-bottom:.3px solid black ;
+border-bottom:2px solid black ;
+
 
 }
 
-.experience-box {
+/* .experience-box {
 
 margin-top: 10px;
 margin-left: 5px;
@@ -376,4 +401,4 @@ width:380px;
 border: none;  
 font-size: 1rem;
 
-}
+} */

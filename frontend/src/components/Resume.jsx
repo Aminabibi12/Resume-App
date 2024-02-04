@@ -5,6 +5,8 @@ import Main from './main';
 import ColourBar from './ColourBar';
 import html2pdf from 'html2pdf.js';
 
+
+
 function Resume() {
   const colorOptions = ["#DBCDF0", "#D8E2DC", "#FFE5D9", "#FFE9EE", "#C6DEF1"];
   const [selectedColor, setSelectedColor] = useState("#DBCDF0");
@@ -28,12 +30,11 @@ function Resume() {
 
   const generatePdf = () => {
     const content = document.getElementById('resume-content');
-    content.style.border = '5px solid black';
-    content.style.borderRadius='10px';
-    content.style.marginTop='35px';
-    content.style.marginLeft='10px';
-    content.style.marginRight='10px';
-
+   
+    // content.style.marginTop='35px';
+    // content.style.marginLeft='10px';
+    // content.style.marginRight='10px';
+   
 
     // Create a copy of the content
     const contentCopy = content.cloneNode(true);
@@ -47,44 +48,40 @@ function Resume() {
     const inputFieldsInCopy = contentCopy.querySelectorAll('input');
     inputFieldsInCopy.forEach((input) => {
       // Check if the input is for name or contact, show it, hide others
-      if (input.name === 'fullName' || input.name === 'profession' || input.name === 'phone' || input.name === 'email'|| input.name === 'location' ) {
+      if (input.name === 'fullName' || input.name === 'profession' || input.name === 'phone' || input.name === 'email'|| input.name === 'location' || input.name === 'profile' ) {
         input.style.display = 'block';
       } else {
         input.style.display = 'none';
       }
     });
-    const textareasInCopy = contentCopy.querySelectorAll('textarea');
-textareasInCopy.forEach((textarea) => {
-  textarea.style.display = 'none';
-  const div = document.createElement('div');
-  div.innerText = textarea.value;
-  div.style.whiteSpace = 'pre-wrap';
-  div.style.marginTop = '10px'; // Adjust as needed
-  contentCopy.appendChild(div);
-});
+    
 
     html2pdf(contentCopy, {
-    
+     
       filename: 'resume.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     });
 
-    // Restore the original content after generating the PDF
+   
     content.style.border = 'none';
-  };
+    
+  }
 
+  
   return (
     <div className="resume-container">
-      <div className="resume">
-        <div className="color-bar">
-          <ColourBar colors={colorOptions} onSelectColor={handleColorChange} />
-        </div>
+      <div className="resume-wrapper">
+        <div className="resume">
+          <div className="color-bar">
+            <ColourBar colors={colorOptions} onSelectColor={handleColorChange} />
+          </div>
 
-        <div id="resume-content">
-          <Name selectedColor={selectedColor} />
-          <Main />
+          <div id="resume-content">
+            <Name selectedColor={selectedColor} />
+            <Main />
+          </div>
         </div>
       </div>
       <button
@@ -94,9 +91,8 @@ textareasInCopy.forEach((textarea) => {
           width: '200px',
           fontSize: '1.5rem',
           borderRadius: '15px',
-          marginLeft: '630px',
-          marginBottom: '10px',
-          marginTop: '20px',
+          margin: '20px auto', // Center the button and provide margin
+          display: 'block',    // Ensure it's a block-level element
         }}
         onClick={generatePdf}
       >

@@ -25,6 +25,7 @@ function Skills() {
 
   return (
     <div className="skills-box" >
+      <h2 style={{fontSize:"1.2rem", textAlign:"left"}}>Skills:</h2>
       <form onSubmit={(e) => e.preventDefault()}>
         <div>
           <input
