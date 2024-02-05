@@ -35,7 +35,7 @@ function Skills() {
             value={newSkill}
             onChange={handleSkillsChange}
           />
-          <button type="button" onClick={handleAddSkill}>
+          <button type="button" style={{backgroundColor:"rgb(248, 239, 239)"}} onClick={handleAddSkill}>
             <FontAwesomeIcon icon={faPlus} />
           </button>
         </div>
@@ -47,9 +47,10 @@ function Skills() {
             {skill}
             <button
               type="button"
+              style={{backgroundColor:"rgb(248, 239, 239)"}} 
               onClick={() => handleRemoveSkill(index)}
             >
-              <FontAwesomeIcon icon={faMinus} />
+              <FontAwesomeIcon icon={faMinus}  />
             </button>
           </li>
         ))}

@@ -35,7 +35,7 @@ function Language() {
             value={newLanguage}
             onChange={handleLanguageChange}
           />
-          <button type="button" onClick={handleAddLanguage}>
+          <button type="button"  style={{backgroundColor:"rgb(248, 239, 239)"}}  onClick={handleAddLanguage}>
             <FontAwesomeIcon icon={faPlus} />
           </button>
         </div>
@@ -47,6 +47,7 @@ function Language() {
             {language}
             <button
               type="button"
+              style={{backgroundColor:"rgb(248, 239, 239)"}} 
               onClick={() => handleRemoveLanguage(index)}
             >
               <FontAwesomeIcon icon={faMinus} />
