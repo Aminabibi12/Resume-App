@@ -19,11 +19,12 @@
    margin-bottom: 20px; /* Add margin at the bottom to separate the button */
  }
  
- #resume-content {
-   
+ /* #resume-content {
+   padding-left: 20px;
+   padding-right: 20px;
    box-sizing: border-box;
   
- }
+ } */
  
  .download-button {
    margin-top: 20px; /* Ensure some space between the content and the button */
@@ -158,13 +159,14 @@
    height: auto;
    text-align: center;
    border-right: 2px solid black;
+   border-bottom: 2px solid black;
   
  }
 
  .main-box-2 {
    width: 70%;
-   width: 30%;
    height: auto;
+   
   
 }
 
@@ -354,7 +356,8 @@ text-align: left;
 
 margin-top: 20px;
 border: none;
-margin-left: 2px;
+
+border-bottom:2px solid black ;
 
 }
 
@@ -363,7 +366,7 @@ margin-left: 2px;
 width:535px;
 height:auto;
 border: none;
-border-bottom:2px solid black ;
+
 
 
 }

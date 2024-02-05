@@ -21,11 +21,12 @@ const Education = () => {
 
   return (
     <div style={{
-      marginLeft:"2px",
+      borderBottom:"2px solid black",
       marginTop: "10px",
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
+    
      
     }}>
       <h1 style={{fontSize:"1.4rem"}}>Education:</h1>
@@ -57,7 +58,7 @@ const Education = () => {
         <button onClick={handleAddEducation} style={{ marginLeft: "10px", backgroundColor: "#aa4d84", color: "white", width: "80px", borderRadius: "10px" }}>Add</button>
       </div>
 
-      <div  style={{ borderBottom:"2px solid black",width: "535px", marginTop:"10px"}} >
+      <div  style={{ width: "535px", marginTop:"10px"}} >
         {educations.map((education, index) => (
           <div key={index}>
             <p style={{ marginLeft: "5px", marginTop: "10px", width: "500px"}}>

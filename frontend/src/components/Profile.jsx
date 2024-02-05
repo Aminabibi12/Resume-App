@@ -21,7 +21,7 @@ function Profile() {
   return (
     <div className="profile-box">
       <div className="profile" style={{}}>
-        <h2 style={{ fontSize: "1.4rem" }}>Profile:</h2>
+        <h2 style={{ fontSize: "1.4rem",marginLeft: '2px' }}>Profile:</h2>
 
         <div 
           className="profile-input"

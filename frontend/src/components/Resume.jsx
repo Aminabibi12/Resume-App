@@ -30,45 +30,41 @@ function Resume() {
 
   const generatePdf = () => {
     const content = document.getElementById('resume-content');
-   
-    // content.style.marginTop='35px';
-    // content.style.marginLeft='10px';
-    // content.style.marginRight='10px';
-   
-
-    // Create a copy of the content
+  
     const contentCopy = content.cloneNode(true);
-
-    // Hide buttons and input fields in the copy
+  
     const buttonsInCopy = contentCopy.querySelectorAll('button');
     buttonsInCopy.forEach((button) => {
       button.style.display = 'none';
     });
-
+  
     const inputFieldsInCopy = contentCopy.querySelectorAll('input');
     inputFieldsInCopy.forEach((input) => {
-      // Check if the input is for name or contact, show it, hide others
-      if (input.name === 'fullName' || input.name === 'profession' || input.name === 'phone' || input.name === 'email'|| input.name === 'location' || input.name === 'profile' ) {
+      if (input.name === 'fullName' || input.name === 'profession' || input.name === 'phone' || input.name === 'email' || input.name === 'location' || input.name === 'profile') {
         input.style.display = 'block';
       } else {
         input.style.display = 'none';
       }
     });
-    
-
+  
     html2pdf(contentCopy, {
-     
       filename: 'resume.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      onAfterHtmlToPdf: (pdf) => {
+        // Add borders to each page
+        const pageCount = pdf.internal.getNumberOfPages();
+        for (let i = 1; i <= pageCount; i++) {
+          pdf.setPage(i);
+          pdf.rect(5, 5, 200, 287); // Adjust the values as needed
+        }
+      },
     });
-
-   
+  
     content.style.border = 'none';
-    
   }
-
+  
   
   return (
     <div className="resume-container">
