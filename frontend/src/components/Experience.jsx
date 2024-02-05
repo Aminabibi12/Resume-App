@@ -61,7 +61,7 @@ const Experience = () => {
 
       <div style={{ borderBottom:"2px solid black",width: "535px", marginTop:"10px"}} >
         {experiences.map((experience, index) => (
-          <div style={{ borderBottom:".5px solid black", width:"100%" }}key={index}>
+          <div style={{ marginLeft: "5px", marginTop: "10px", width: "500px"}}key={index}>
             <p style={{ marginLeft: "5px", marginTop: "10px", width: "500px"}}>
               <span  style={{ fontWeight: "bold", marginLeft: "5px",marginTop: "10px", width: "500px" }}>Company:</span> {experience.company},
               <br />
