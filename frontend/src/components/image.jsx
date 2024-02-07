@@ -16,7 +16,7 @@ function Image() {
     <div className="image-container">
       {!image && (
         <label htmlFor="imageInput" className="file-input-label">
-          Choose File
+          Choose Photo
         </label>
       )}
       <input
